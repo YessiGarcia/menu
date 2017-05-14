@@ -57,7 +57,7 @@ header img{
 
 .boton{
 	height: 30px;
-	width: 100px;
+	width: 60px;
 	background-color: black;
 	color: beige;
 
@@ -92,7 +92,7 @@ header img{
 	}
 
 	.menu ul ul a{
-		padding: 15px 50px;
+		padding: 15px 70px;
 	}
 
 	#btn-menu:checked ~ .menu {
@@ -104,6 +104,6 @@ header img{
 	}
 
 	.boton{
-
+		width: 100%;
 	}
 }
