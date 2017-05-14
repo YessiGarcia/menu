@@ -1,79 +1,109 @@
-/*Estilos generales*/
-nav ul{
-	list-style: none;
-	padding: 0;
-	
+*{
+	padding:0;
+	margin: 0;
+	box-sizing: border-box; 
 }
 
-nav a{
-	text-decoration: none;
-	display: block;
-	padding: 0 2.5em;
-	background-color: #f16260 ;
-	transform: .4s;
-	color: beige;
-}
-
-nav img{
-	color: white;
-	display: block;
-	padding-left:2.5em;
+header{
+	height: 50px;
 	background-color: #f16260;
-	width: 20%;
-	margin: .5em;
+	display: flex;
+	justify-content: flex-end;
 }
 
-nav a:hover{
+header label{
+	font-size: 30px;
+	cursor: pointer;
+	display: none;
+}
+
+header img{
+	height: 40px;
+	margin: 5px;
+	position: absolute;
+	left: 1%;
+}
+
+#btn-menu{
+	display: none;
+}
+
+.menu ul{
+	background-color: #f16260;
+	display: flex;
+	list-style: none;
+}
+
+.menu ul ul{
+	display: none;
+}
+
+.menu a{
+	display: block;
+	padding: 15px 40px;
+	color: beige;
+	text-decoration: none;
+}
+
+.menu a:hover{
 	background-color: beige;
 	color: #f16260;
 }
 
-nav li{
-	line-height: 3rem;
-	position: relative;
-}
- 
-.menu ul{
+.menu ul li:hover ul{
+	display: block;
 	position: absolute;
-}
+} 
 
-/*Primer nivel*/
-.menu{
-	display: table;
-	background-color: #f16260;
-	width: 100%;
-}
- 
-.menu > li{
-	float: left;
-}
-
-/*Segundo nivel*/
-
-nav li li{
-	background-color: #222;
-	width: 215px;
-	transition: all .5s;
-	max-height: 0;
-	overflow: hidden;
-}
-
-nav li:hover ul > li{
-	max-height:500px;
-	overflow: visible;
+.boton{
+	height: 30px;
+	width: 100px;
+	background-color: black;
+	color: beige;
 
 }
 
-.menu > li > ul{
-	top: 100%;
-}
-
-@media (max-width: 480px){
-	nav a{
-		display: none;
+@media (max-width: 480pX){
+	.icon-menu{
+		display: block;
+		right: 90%;
+		display: flex;
+		align-items:center;
+		color: beige;
 	}
 
-	nav img{
-		
+	.menu{
+		position: absolute;
+		top: 50px;
+		left: 0;
+		transform: translateX(-100%);
+		transition: all 0.3s;
+	}
+
+	.menu ul{
+		display: block;
+		top: 50px;
+
+	}
+
+	.menu ul li:hover ul{
+		display: none;
+		position: static;
+	}
+
+	.menu ul ul a{
+		padding: 15px 50px;
+	}
+
+	#btn-menu:checked ~ .menu {
+		transform: translateX(0%);		
+	}
+
+	.sub-menu{
+		background-color: #6B203C;
+	}
+
+	.boton{
+
 	}
 }
